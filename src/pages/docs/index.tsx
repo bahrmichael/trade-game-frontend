@@ -161,4 +161,6 @@ const Base = () => (
   </div>
 );
 
-export default () => <Base />;
+const Index = () => <Base />;
+
+export default Index;
