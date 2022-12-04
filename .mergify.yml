@@ -1,0 +1,25 @@
+pull_request_rules:
+  - name: Auto-approve upgrades
+    conditions:
+      - or:
+          - and:
+              - author=renovate[bot]
+              - or:
+                  - title~=update .* digest to \w+
+                  - title~=update .* monorepo
+                  - title~=update dependency
+                  - title~=update .* action to \w+
+                  - title~=pin .* action to \w+
+          - author=dependabot[bot]
+      - -label=major-upgrade
+    actions:
+      review:
+        type: APPROVE
+        message: Automatically approving non-major dependency upgrade
+  - name: Auto-merge upgrades
+    conditions:
+      - check-success='Vercel – trade-game-frontend'
+      - check-success='renovate/stability-days'
+    actions:
+      merge:
+        method: squash
