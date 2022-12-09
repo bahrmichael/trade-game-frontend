@@ -30,7 +30,7 @@
     "autoprefixer": "10.4.13",
     "cross-env": "7.0.3",
     "cssnano": "5.1.14",
-    "eslint": "8.27.0",
+    "eslint": "8.28.0",
     "eslint-config-airbnb-base": "15.0.0",
     "eslint-config-airbnb-typescript": "16.2.0",
     "eslint-config-next": "12.3.3",
